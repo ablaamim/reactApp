@@ -19,7 +19,7 @@ spec:
           command:
             - /bin/sh
             - -c
-            - "echo 'Modification pushed!' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
+            - "echo 'Modification pushed to remote!' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
           ports:
             - containerPort: 80
           imagePullPolicy: Always
