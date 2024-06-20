@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
-          Hello from Simlab Cluster !
+          Hello from Simlab K8s Cluster!
         </h1>
       </header>
     </div>
