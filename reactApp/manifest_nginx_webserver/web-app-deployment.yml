@@ -19,7 +19,7 @@ spec:
           command:
             - /bin/sh
             - -c
-            - "echo 'Served from simlab k8s Cluster using nginx webserver!' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
+            - "echo 'Modification pushed!' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
           ports:
             - containerPort: 80
           imagePullPolicy: Always
