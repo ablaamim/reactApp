@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reacthelloworld
+spec:
+  selector:
+    app: reacthelloworld
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 3001
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reacthelloworld
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reacthelloworld
+  template:
+    metadata:
+      labels:
+        app: reacthelloworld
+    spec:
+      containers:
+        - name: reacthelloworld
+          image: ablaamim/simlab-react-image
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
